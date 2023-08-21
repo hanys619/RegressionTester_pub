@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>NUGU Interactive Regression Tester</title>
+  <!-- font CSS -->
+  <link rel="stylesheet" href="../font/pretendard/pretendard.css">
+  <!-- datepicker CSS -->
+  <link rel="stylesheet" href="../css/flatpickr.min.css">
+  <!-- select CSS -->
+  <link rel="stylesheet" href="../css/nice-select.css">
+  <!-- common CSS -->
+  <link rel="stylesheet" href="../css/common.css">
+  <!-- jquery JS -->
+  <script src="../js/jquery-3.2.1.min.js"></script>
+  <!-- datepicker JS -->
+  <script src="../js/flatpickr.min.js"></script>
+  <script src="../js/flatpickr.minMaxTimePlugin.min.js"></script>
+  <script src="../js/ko.js"></script>
+  <!-- select JS -->
+  <script src="../js/jquery.nice-select.min.js"></script>
+   <!-- common JS -->
+  <script src="../js/common.js"></script>
+</head>
+<body>
+
+<form action="">
+  <fieldset>
+
+    <div class="wrap wrap_pop">
+      <!-- wrap_content -->
+      <div class="wrap_content">
+        <div class="content">
+          <h1 class="page_step">그룹 생성</h1>
+
+          <!-- box_search -->
+          <div class="box_search search_type1">
+            <div class="row">
+              <div class="item">
+                <span class="txt">서비스</span>
+                <div class="select_area w_160"> <!-- 사이즈별 클래스 제어 w_160 -->
+                  <select name="" id="" required>
+                    <option value="">전체</option>
+                    <option value="">NUGU 상담봇</option>
+                    <option value="">말로하는 AI상담</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="item">
+                <span class="txt required">그룹명</span> <!-- 필수입력항목 required 클리스 추가 -->
+                <input type="text" class="inp" style="width:160px;" placeholder="그룹명">
+              </div>
+
+              <div class="item">
+                <span class="txt">설명</span>
+                <input type="text" class="inp" style="width:592px;" placeholder="설명">
+              </div>
+            </div>
+          </div>
+          <!-- //box_search -->
+
+          <!-- table -->
+          <div class="wrap_table">
+            <div class="search_area">
+              <input type="text" class="inp" style="width:200px;" placeholder="Test Case명으로 검색하세요.">
+              <a href="#" class="btn btn_large btn_primary">검색</a>
+            </div>
+
+            <!-- nodata -->
+            <div class="nosearch">
+              <p class="txt">검색어를 입력해주세요.</p>
+            </div>
+            <!-- //nodata -->
+
+          </div>
+          <!-- //table -->
+
+          <div class="btn_bottom">
+            <a href="#" class="btn btn_large btn_default">취소</a>
+            <a href="#" class="btn btn_large btn_primary">생성</a>
+          </div>
+        </div>
+
+      </div>
+      <!-- //wrap_content -->
+    </div>
+    <!--//wrap -->
+
+  </fieldset>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>NUGU Interactive Regression Tester</title>
+  <!-- font CSS -->
+  <link rel="stylesheet" href="../font/pretendard/pretendard.css">
+  <!-- datepicker CSS -->
+  <link rel="stylesheet" href="../css/flatpickr.min.css">
+  <!-- select CSS -->
+  <link rel="stylesheet" href="../css/nice-select.css">
+  <!-- common CSS -->
+  <link rel="stylesheet" href="../css/common.css">
+  <!-- jquery JS -->
+  <script src="../js/jquery-3.2.1.min.js"></script>
+  <!-- datepicker JS -->
+  <script src="../js/flatpickr.min.js"></script>
+  <script src="../js/flatpickr.minMaxTimePlugin.min.js"></script>
+  <script src="../js/ko.js"></script>
+  <!-- select JS -->
+  <script src="../js/jquery.nice-select.min.js"></script>
+   <!-- common JS -->
+  <script src="../js/common.js"></script>
+</head>
+<body>
+
+<form action="">
+  <fieldset>
+
+    <!-- wrap -->
+    <div class="wrap">
+      <!-- wrap_lnb -->
+      <div class="wrap_lnb">
+        <div class="box_logo">
+          <strong class="logo">NUGU Interactive<br>Regression Tester</strong>
+        </div>
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="#"><i class="icon ico_1">icon</i><span class="txt">배포 관리 및 실행</span></a>
+            </li>
+            <li>
+            <a href="#"><i class="icon ico_2">icon</i><span class="txt">Test Case 관리 및 실행</span></a>
+            </li>
+            <li>
+              <a href="#"><i class="icon ico_3">icon</i><span class="txt">그룹 관리 및 실행</span></a>
+            </li>
+            <li class="on">
+              <a href="#"><i class="icon ico_4">icon</i><span class="txt">Test Data 정보 관리</span></a>
+            </li>
+            <li>
+              <a href="#"><i class="icon ico_5">icon</i><span class="txt">Test Data 번호 관리</span></a>
+            </li>
+            <li>
+              <a href="#"><i class="icon ico_6">icon</i><span class="txt">Test 이력</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- //wrap_lnb -->
+
+      <!-- wrap_content -->
+      <div class="wrap_content">
+        <div class="box_header">
+          <a href="#" class="btn_login">로그아웃</a>
+          <a href="#" class="btn_pw">비밀번호변경</a>
+        </div>
+
+        <div class="content">
+          <h1 class="page_step">Test Data 정보 관리</h1>
+
+          <div class="box_search search_type1">
+            <div class="select_area w_160"> <!-- 사이즈별 클래스 제어 w_160 -->
+              <select name="" id="" required>
+                <option value="">전체</option>
+                <option value="">NUGU 상담봇</option>
+                <option value="">말로하는 AI상담</option>
+              </select>
+            </div>
+
+            <input type="text" class="inp" style="width:300px;" placeholder="검색어를 입력하세요.">
+
+            <a href="#" class="btn btn_large btn_primary">검색</a>
+          </div>
+
+          <!-- wrap_table -->
+          <div class="wrap_table">
+            <table class="tbl_type1">
+              <caption>Test Data 정보 관리</caption>
+              <colgroup>
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scrope="col">&nbsp;</th>
+                  <th scrope="col">svc_mgmt_num</th>
+                  <th scrope="col">svc_num</th>
+                  <th scrope="col">cust_num</th>
+                  <th scrope="col">API 수</th>
+                  <th scrope="col">설명</th>
+                  <th scrope="col">테스트 목적</th>
+                  <th scrope="col">API</th>
+                  <th scrope="col">복사</th>
+                  <th scrope="col">삭제</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>01012341234</td>
+                  <td>01012341234</td>
+                  <td>01012341234</td>
+                  <td>5</td>
+                  <td><span class="ellipsis">설명내용이 길어질 경우 설명내용이 길어질 경우 설명내용이 길어질 경우 설명내용이 길어질 경우</span></td>
+                  <td>A, B, C</td>
+                  <td><a href="#" class="btn btn_primary">API</a></td>
+                  <td><a href="#" class="btn btn_default">복사</a></td>
+                  <td><a href="#" class="btn btn_default">삭제</a></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>01012341234</td>
+                  <td>01012341234</td>
+                  <td>01012341234</td>
+                  <td>5</td>
+                  <td>설명내용이 길어질 경우 설명내용이 길어질 경우</td>
+                  <td>A, B, C</td>
+                  <td><a href="#" class="btn btn_primary">API</a></td>
+                  <td><a href="#" class="btn btn_default">복사</a></td>
+                  <td><a href="#" class="btn btn_default">삭제</a></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>01012341234</td>
+                  <td>01012341234</td>
+                  <td>01012341234</td>
+                  <td>5</td>
+                  <td>설명내용</td>
+                  <td>A, B, C</td>
+                  <td><a href="#" class="btn btn_primary">API</a></td>
+                  <td><a href="#" class="btn btn_default">복사</a></td>
+                  <td><a href="#" class="btn btn_default">삭제</a></td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>01012341234</td>
+                  <td>01012341234</td>
+                  <td>01012341234</td>
+                  <td>5</td>
+                  <td>설명내용</td>
+                  <td>A, B, C</td>
+                  <td><a href="#" class="btn btn_primary">API</a></td>
+                  <td><a href="#" class="btn btn_default">복사</a></td>
+                  <td><a href="#" class="btn btn_default">삭제</a></td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>01012341234</td>
+                  <td>01012341234</td>
+                  <td>01012341234</td>
+                  <td>5</td>
+                  <td>설명내용</td>
+                  <td>A, B, C</td>
+                  <td><a href="#" class="btn btn_primary">API</a></td>
+                  <td><a href="#" class="btn btn_default">복사</a></td>
+                  <td><a href="#" class="btn btn_default">삭제</a></td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>01012341234</td>
+                  <td>01012341234</td>
+                  <td>01012341234</td>
+                  <td>5</td>
+                  <td>설명내용</td>
+                  <td>A, B, C</td>
+                  <td><a href="#" class="btn btn_primary">API</a></td>
+                  <td><a href="#" class="btn btn_default">복사</a></td>
+                  <td><a href="#" class="btn btn_default">삭제</a></td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>01012341234</td>
+                  <td>01012341234</td>
+                  <td>01012341234</td>
+                  <td>5</td>
+                  <td>설명내용</td>
+                  <td>A, B, C</td>
+                  <td><a href="#" class="btn btn_primary">API</a></td>
+                  <td><a href="#" class="btn btn_default">복사</a></td>
+                  <td><a href="#" class="btn btn_default">삭제</a></td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>01012341234</td>
+                  <td>01012341234</td>
+                  <td>01012341234</td>
+                  <td>5</td>
+                  <td>설명내용</td>
+                  <td>A, B, C</td>
+                  <td><a href="#" class="btn btn_primary">API</a></td>
+                  <td><a href="#" class="btn btn_default">복사</a></td>
+                  <td><a href="#" class="btn btn_default">삭제</a></td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>01012341234</td>
+                  <td>01012341234</td>
+                  <td>01012341234</td>
+                  <td>5</td>
+                  <td>설명내용</td>
+                  <td>A, B, C</td>
+                  <td><a href="#" class="btn btn_primary">API</a></td>
+                  <td><a href="#" class="btn btn_default">복사</a></td>
+                  <td><a href="#" class="btn btn_default">삭제</a></td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>01012341234</td>
+                  <td>01012341234</td>
+                  <td>01012341234</td>
+                  <td>5</td>
+                  <td>설명내용</td>
+                  <td>A, B, C</td>
+                  <td><a href="#" class="btn btn_primary">API</a></td>
+                  <td><a href="#" class="btn btn_default">복사</a></td>
+                  <td><a href="#" class="btn btn_default">삭제</a></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- pagination -->
+            <div class="pagination">
+              <a href="#" class="first disable"><span class="hide">처음</span></a> <!-- 비활성화시 disable 클래스 추가 -->
+              <a href="#" class="prev"><span class="hide">이전</span></a>
+              <span class="paging">
+                <a href="#" class="current">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">9</a>
+                <a href="#">10</a>
+              </span>
+              <a href="#" class="next"><span class="hide">다음</span></a>
+              <a href="#" class="last"><span class="hide">끝</span></a>
+            </div>
+            <!-- //pagination -->
+          </div>
+          <!-- //wrap_table -->
+
+        </div>
+
+      </div>
+      <!-- //wrap_content -->
+    </div>
+    <!--//wrap -->
+
+  </fieldset>
+</form>
+
+</body>
+</html>

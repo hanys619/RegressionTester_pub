@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>NUGU Interactive Regression Tester</title>
+  <!-- font CSS -->
+  <link rel="stylesheet" href="../font/pretendard/pretendard.css">
+  <!-- datepicker CSS -->
+  <link rel="stylesheet" href="../css/flatpickr.min.css">
+  <!-- select CSS -->
+  <link rel="stylesheet" href="../css/nice-select.css">
+  <!-- common CSS -->
+  <link rel="stylesheet" href="../css/common.css">
+  <!-- jquery JS -->
+  <script src="../js/jquery-3.2.1.min.js"></script>
+  <!-- datepicker JS -->
+  <script src="../js/flatpickr.min.js"></script>
+  <script src="../js/flatpickr.minMaxTimePlugin.min.js"></script>
+  <script src="../js/ko.js"></script>
+  <!-- select JS -->
+  <script src="../js/jquery.nice-select.min.js"></script>
+   <!-- common JS -->
+  <script src="../js/common.js"></script>
+</head>
+<body>
+
+<form action="">
+  <fieldset>
+
+    <!-- wrap -->
+    <div class="wrap wrap_pop">
+      <!-- wrap_content -->
+      <div class="wrap_content">
+        <div class="content">
+          <h1 class="page_step">Test Case 확인</h1>
+
+          <!-- box_search -->
+          <div class="box_search search_type1">
+            <div class="row">
+              <div class="item">
+                <span class="txt">서비스</span>
+                <div class="select_area w_160"> <!-- 사이즈별 클래스 제어 w_160 -->
+                  <select name="" id="" required>
+                    <option value="">전체</option>
+                    <option value="">NUGU 상담봇</option>
+                    <option value="" selected>말로하는 AI상담</option>
+                  </select>
+                </div>
+              </div>
+  
+              <div class="item">
+                <span class="txt required">Test Case명</span> <!-- 필수입력항목 required 클리스 추가 -->
+                <input type="text" class="inp" style="width:160px;" placeholder="배포명" value="Test CaseA">
+              </div>
+  
+              <div class="item">
+                <span class="txt">설명</span>
+                <input type="text" class="inp" style="width:592px;" placeholder="설명" value="Test Case A에 대한 설명 설명 설명">
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="item">
+                <span class="txt">메시지 수</span>
+                <input type="text" class="inp" style="width:160px;" placeholder="메시지 수" value="10개">
+              </div>
+
+              <div class="item">
+                <span class="txt">Test Data 정보</span>
+                <input type="text" class="inp" style="width:160px;" placeholder="Test Data 정보" value="svc_mgmt_num">
+              </div>
+
+              <div class="item">
+                <span class="txt">센터명</span>
+                <input type="text" class="inp" style="width:592px;" placeholder="센터명" value="센터명">
+              </div>
+            </div>
+          </div>
+          <!-- //box_search -->
+
+          <h2 class="tit_sub">문자 치열 정의</h2>
+
+          <table class="tbl_type1 tbl_change">
+            <caption>문자 치열 정의</caption>
+            <colgroup>
+              <col width="">
+              <col width="">
+              <col width="70">
+            </colgroup>
+            <thead>
+              <tr>
+                <th scrope="col">현재 text</th>
+                <th scrope="col">변경 text</th>
+                <th scrope="col">삭제</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="text" class="inp" value="#TEST_ID#"></td>
+                <td><input type="text" class="inp" value="#TESTTEST_ID#"></td>
+                <td><button type="button" class="btn_del">삭제</button></td>
+              </tr>
+              <tr>
+                <td><input type="text" class="inp" value="#TEST_ID#"></td>
+                <td><input type="text" class="inp" value="#TESTTEST_ID#"></td>
+                <td><button type="button" class="btn_del">삭제</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="btn_add_area">
+            <button type="button" class="btn_add">추가</button>
+          </div>
+
+          <!-- wrap_table -->
+          <div class="wrap_table">
+            <div class="btn_area align_r">
+              <a href="#" class="btn btn_large btn_primary">예상 결과 확인</a>
+              <a href="#" class="btn btn_large btn_primary btn_pop_open" onclick="view_layer('pop_msec')">waiting_msec 일괄변경</a>
+            </div>
+            <table class="tbl_type1 tbl_accodian">
+              <caption></caption>
+              <colgroup>
+                <col width="60">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="120">
+                <col width="">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scrope="col">seq</th>
+                  <th scrope="col">Simulator</th>
+                  <th scrope="col">Target Sys</th>
+                  <th scrope="col">Message name</th>
+                  <th scrope="col">waiting_msec</th>
+                  <th scrope="col">message</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>awf_sim</td>
+                  <td>Awf</td>
+                  <td>S INCOMING CALL REQ</td>
+                  <td><span class="inp_area"><input type="text" class="inp" value="1"></span></td>
+                  <td class="toggle_btn">
+                    <div class="txt_head">
+                      {"version":"0.6","taskId":"64373d24aa4de47e86f4125c.S_TASKENGINE_01_B","callId":"#CALL_ID#","caller":"#SVC_NUM#","callee":"#CALLEE#","messageName":"S_STT_FINAL_REQ","messageId":"71a079c3-1dbd-444a-85a6 22d624add625","sender":"C_AWF_B", "timeStamp":1681341751793,"statusCode":200},"sSttFinalReq":{"stt":"{\"action\":\"speech_recognition\",\"code\":0,\"final\":true,\"resultIndex\":0,\"results\":[{\"align_error\":\"ALN_SKIP\",\"punct_decision\":\"FAIL\",\"score\":1,\"transcript\":\"약정 #TEST_ID#해주세요\"}],\"tr_id\":\"#CALL_ID#\",\"uttr_no\":1}
+                    </div>
+                  </td>
+                </tr>
+                <tr class="toggle_view">
+                  <td colspan="6">
+                    <div class="txt_area">
+                      <textarea name="" id="" cols="100" rows="10">{"version":"0.6","taskId":"64373d24aa4de47e86f4125c.S_TASKENGINE_01_B","callId":"#CALL_ID#","caller":"#SVC_NUM#","callee":"#CALLEE#","messageName":"S_STT_FINAL_REQ","messageId":"71a079c3-1dbd-444a-85a6 22d624add625","sender":"C_AWF_B", "timeStamp":1681341751793,"statusCode":200},"sSttFinalReq":{"stt":"{\"action\":\"speech_recognition\",\"code\":0,\"final\":true,\"resultIndex\":0,\"results\":[{\"align_error\":\"ALN_SKIP\",\"punct_decision\":\"FAIL\",\"score\":1,\"transcript\":\"약정 #TEST_ID#해주세요\"}],\"tr_id\":\"#CALL_ID#\",\"uttr_no\":1}"}}</textarea>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>awf_sim</td>
+                  <td>Awf</td>
+                  <td>S INCOMING CALL REQ</td>
+                  <td><span class="inp_area"><input type="text" class="inp" value="1"></span></td>
+                  <td class="toggle_btn">
+                    <div class="txt_head">
+                      {"version":"0.6","taskId":"64373d24aa4de47e86f4125c.S_TASKENGINE_01_B","callId":"#CALL_ID#","caller":"#SVC_NUM#","callee":"#CALLEE#","messageName":"S_STT_FINAL_REQ","messageId":"71a079c3-1dbd-444a-85a6 22d624add625","sender":"C_AWF_B", "timeStamp":1681341751793,"statusCode":200},"sSttFinalReq":{"stt":"{\"action\":\"speech_recognition\",\"code\":0,\"final\":true,\"resultIndex\":0,\"results\":[{\"align_error\":\"ALN_SKIP\",\"punct_decision\":\"FAIL\",\"score\":1,\"transcript\":\"약정 #TEST_ID#해주세요\"}],\"tr_id\":\"#CALL_ID#\",\"uttr_no\":1}
+                    </div>
+                  </td>
+                </tr>
+                <tr class="toggle_view">
+                  <td colspan="6">
+                    <div class="txt_area">
+                      <textarea name="" id="" cols="100" rows="10">{"version":"0.6","taskId":"64373d24aa4de47e86f4125c.S_TASKENGINE_01_B","callId":"#CALL_ID#","caller":"#SVC_NUM#","callee":"#CALLEE#","messageName":"S_STT_FINAL_REQ","messageId":"71a079c3-1dbd-444a-85a6 22d624add625","sender":"C_AWF_B", "timeStamp":1681341751793,"statusCode":200},"sSttFinalReq":{"stt":"{\"action\":\"speech_recognition\",\"code\":0,\"final\":true,\"resultIndex\":0,\"results\":[{\"align_error\":\"ALN_SKIP\",\"punct_decision\":\"FAIL\",\"score\":1,\"transcript\":\"약정 #TEST_ID#해주세요\"}],\"tr_id\":\"#CALL_ID#\",\"uttr_no\":1}"}}</textarea>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>awf_sim</td>
+                  <td>Awf</td>
+                  <td>S INCOMING CALL REQ</td>
+                  <td><span class="inp_area"><input type="text" class="inp" value="1"></span></td>
+                  <td class="toggle_btn">
+                    <div class="txt_head">
+                      {"version":"0.6","taskId":"64373d24aa4de47e86f4125c.S_TASKENGINE_01_B","callId":"#CALL_ID#","caller":"#SVC_NUM#","callee":"#CALLEE#","messageName":"S_STT_FINAL_REQ","messageId":"71a079c3-1dbd-444a-85a6 22d624add625","sender":"C_AWF_B", "timeStamp":1681341751793,"statusCode":200},"sSttFinalReq":{"stt":"{\"action\":\"speech_recognition\",\"code\":0,\"final\":true,\"resultIndex\":0,\"results\":[{\"align_error\":\"ALN_SKIP\",\"punct_decision\":\"FAIL\",\"score\":1,\"transcript\":\"약정 #TEST_ID#해주세요\"}],\"tr_id\":\"#CALL_ID#\",\"uttr_no\":1}
+                    </div>
+                  </td>
+                </tr>
+                <tr class="toggle_view">
+                  <td colspan="6">
+                    <div class="txt_area">
+                      <textarea name="" id="" cols="100" rows="10">{"version":"0.6","taskId":"64373d24aa4de47e86f4125c.S_TASKENGINE_01_B","callId":"#CALL_ID#","caller":"#SVC_NUM#","callee":"#CALLEE#","messageName":"S_STT_FINAL_REQ","messageId":"71a079c3-1dbd-444a-85a6 22d624add625","sender":"C_AWF_B", "timeStamp":1681341751793,"statusCode":200},"sSttFinalReq":{"stt":"{\"action\":\"speech_recognition\",\"code\":0,\"final\":true,\"resultIndex\":0,\"results\":[{\"align_error\":\"ALN_SKIP\",\"punct_decision\":\"FAIL\",\"score\":1,\"transcript\":\"약정 #TEST_ID#해주세요\"}],\"tr_id\":\"#CALL_ID#\",\"uttr_no\":1}"}}</textarea>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //wrap_table -->
+
+          <div class="btn_bottom">
+            <a href="#" class="btn btn_large btn_default">닫기</a>
+            <a href="#" class="btn btn_large btn_primary">수정</a>
+          </div>
+        </div>
+      </div>
+      <!-- //wrap_content -->
+    </div>
+    <!--//wrap -->
+
+  </fieldset>
+</form>
+
+<!-- pop : waiting_msec 일괄변경 -->
+<div class="wrap_layer" id="pop_msec">
+  <div class="pop_inner w_400"> <!-- 팝업너비 w_400 -->
+    <div class="pop_top">
+      <h2 class="tit">waiting_msec 일괄변경</h2>
+      <a role="button" class="btn_close" onclick="close_layer('pop_msec');">닫기</a>
+    </div>
+
+    <div class="pop_box">
+      <div class="pop_cont">
+        <form action="">
+          <fieldset>
+            <legend>waiting_msec 일괄변경</legend>
+            <span class="txt">waiting_msec</span>
+            <input type="text" class="inp" style="width:360px;" placeholder="msec" value="">
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="btn_area align_c">
+        <a role="button" class="btn btn_large btn_default" onclick="close_layer('pop_msec');">취소</a>
+        <a role="button" class="btn btn_large btn_primary" onclick="close_layer('pop_msec');">변경</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- //pop : waiting_msec 일괄변경 -->
+
+</body>
+</html>

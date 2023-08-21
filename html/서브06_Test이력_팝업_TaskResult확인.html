@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>NUGU Interactive Regression Tester</title>
+  <!-- font CSS -->
+  <link rel="stylesheet" href="../font/pretendard/pretendard.css">
+  <!-- datepicker CSS -->
+  <link rel="stylesheet" href="../css/flatpickr.min.css">
+  <!-- select CSS -->
+  <link rel="stylesheet" href="../css/nice-select.css">
+  <!-- common CSS -->
+  <link rel="stylesheet" href="../css/common.css">
+  <!-- jquery JS -->
+  <script src="../js/jquery-3.2.1.min.js"></script>
+  <!-- datepicker JS -->
+  <script src="../js/flatpickr.min.js"></script>
+  <script src="../js/flatpickr.minMaxTimePlugin.min.js"></script>
+  <script src="../js/ko.js"></script>
+  <!-- select JS -->
+  <script src="../js/jquery.nice-select.min.js"></script>
+   <!-- common JS -->
+  <script src="../js/common.js"></script>
+</head>
+<body>
+
+<form action="">
+  <fieldset>
+
+    <div class="wrap wrap_pop">
+      <!-- wrap_content -->
+      <div class="wrap_content">
+        <div class="content">
+          <h1 class="page_step">task_result 확인</h1>
+
+          <div class="box_result">
+            <div class="inner_box float_l">
+              <strong class="tit">예상 결과</strong>
+              <p class="txt">
+                {"callId":"#CALL_ID#","mdn":"#CALLEE#","acpCallResult":"SUCCESS","dlpResult":,"callStartDateTime":"#MASKED#","callEndDateTime":"#MASKED#"}
+              </p>
+            </div>
+            
+            <div class="inner_box float_l">
+              <strong class="tit">시험 결과</strong>
+              <p class="txt">
+                {"callId":"#CALL_ID#","mdn":"#CALLEE#","acpCallResult":"SUCCESS","dlpResult":"{\"code\":\"SUCCESS\",\"data\":{\"storage_period\":\"T3\",\"consultation_cust_detail_type\":\"N0\",\"consultation_task\":\"1\",\"consultation_call_info\":\"A4\",\"consultation_svc_mgmt_num\":\"#SVC_MGMT_NUM#\",\"consultation_memo\":\"선택약정_본인확인_신청관련안내_2차인증_가입신청_약관동의_약관동의_신청완료_선택약정\",\"consultation_result\":\"저장\",\"consultation_svc_num\":\"#SVC_NUM#\",\"consultation_type\":\"선택약정 신청방법/대상자/이용기간문의\",\"consultation_ssn\":\"7506231\",\"automatic_payment_marking\":\"\",\"consultation_ivr_path\":\"AI상담.NUGU.001.선택약정\",\"consultation_unpaid\":\"S\",\"consultation_acnt_num\":\"6169430390\",\"consultation_svc_cd\":\"C\",\"consultation_ivr_auth\":\"T\",\"dialog\":\"C: DIALOG_INITV: 반갑습니다.V: SK텔레콤 AI 상담사입니다.V: 저와의 통화 내용은 녹음되며 본인이 아닌 경우 상담에 제한이 있을 수 있습니다.V: 선택 약정 관련하여 어떤 업무를 도와드릴까요?C: 약정 연장해주세요V: 네, 먼저 고객 정보 확인 후에 선택 약정 관련해서 도와드리겠습니다.V: 문의하실 전화번호가 #MASKED#번 맞으실까요?C: 네V: 네, 확인 감사합니다.V: 정**교 고객님 본인 되십니까?C: 네V: 네, 확인 감사합니다.V: 확인해보니 정**교 고객님께서는 현재 선택 약정에 가입되어 있지 않아, 선택 약정 가입이 가능한데요, 지금 신청해드릴까요?C: 네V: 요청하신 업무 처리를 위해 추가 정보 확인이 필요한데요,V: 요금 자동 납부하고 계시는 카드가 어떻게 되실까요?C: 뭐 신한카드입니다V: 네, 확인 감사합니다.V: 선택 약정은 12개월이나 24개월로 가입하실 수 있어요.V: 약정 할인 금액은 동일하지만 약정기간 만료 전에 해지하시면 약정 반환금이 부과되는데요, 중도해지시점에 따라 24개월 약정 할인반환금이 12개월 약정 할인반환금보다 많아질 수 있어요.V: 12개월, 24개월 중에 몇 개월로 가입하시겠어요?C: 12개월요V: 네, 12개월로 약정 가입 해드리겠습니다. 선택 약정에 가입하시면 이용하시는 요금제 월정액에서 요금약정할인액을 제외한 금액의 25% 할인을 받으실 수 있어요.V: 할인을 위해 약정에 가입되며, 약정기간 12개월 만료 전에 선택 약정 불가 단말기로 기기 변경을 하시거나 이동 전화 해지, 선택 약정 해지 시 할인 반환금이 부과됩니다.V: 이에 동의하시면, \\u0027동의합니다\\u0027 라고 말씀해 주세요.C: 동의합니다V: 선택 약정 가입 처리해 드리겠습니다.V: 잠시만 기다려주세요.V: directive.callback_requestC: callbackV: 네, 12개월로 정상적으로 가입되었고, 한 달 기준으로 부가세 제외하고 13450원을 할인 받을 수 있습니다.V: 선택 약정 관련해서 혹시 더 문의하실 사항 있으신가요?C: 아니요V: 네, 지금까지 AI 상담사였습니다.V: 이용해주셔서 감사합니다.C: hang_upV: #CALL_ID#\",\"consultation_input_tel_num\":\"#SVC_NUM#\",\"consultation_cust_num\":\"#CUST_NUM#\",\"consultation_cust_type\":\"01\",\"consultation_type_code\":\"3513753\",\"consultation_ivr_path_name\":\"AI상담.NUGU.001.선택약정+99999{V5AB}\"},\"statistics\":{\"stt\":\"\",\"nlu\":{\"result\":\"NOT_USE\",\"pre_analyze_result\":\"N\"},\"retry_count\":\"0\",\"scenario_state\":[\"cid_question\",\"check_customer_info_contract_discount\",\"cid_phonenumber\",\"check_completed\",\"cid_identification\",\"check_completed\",\"cid_info\",\"cid_secondary_verification\",\"ask_verification_bank_card\",\"check_completed\",\"cid_info\",\"explain_register_contract_discount\",\"process_register_contract_discount\",\"cid_insert\",\"ask_additional_question_contract_discount\",\"cid_say_goodbye\",\"say_goodbye\"],\"dialog_state\":{\"next_state\":\"DS_END\",\"curr_state\":\"DS_START\"},\"event\":\"hang_up\"}}","callStartDateTime":"#MASKED#","callEndDateTime":"#MASKED#endend"}
+              </p>   
+            </div>
+          </div>
+
+          <div class="btn_bottom">
+            <a href="#" class="btn btn_large btn_default">닫기</a>
+          </div>
+        </div>
+
+      </div>
+      <!-- //wrap_content -->
+    </div>
+    <!--//wrap -->
+
+  </fieldset>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>NUGU Interactive Regression Tester</title>
+  <!-- font CSS -->
+  <link rel="stylesheet" href="../font/pretendard/pretendard.css">
+  <!-- datepicker CSS -->
+  <link rel="stylesheet" href="../css/flatpickr.min.css">
+  <!-- select CSS -->
+  <link rel="stylesheet" href="../css/nice-select.css">
+  <!-- common CSS -->
+  <link rel="stylesheet" href="../css/common.css">
+  <!-- jquery JS -->
+  <script src="../js/jquery-3.2.1.min.js"></script>
+  <!-- datepicker JS -->
+  <script src="../js/flatpickr.min.js"></script>
+  <script src="../js/flatpickr.minMaxTimePlugin.min.js"></script>
+  <script src="../js/ko.js"></script>
+  <!-- select JS -->
+  <script src="../js/jquery.nice-select.min.js"></script>
+   <!-- common JS -->
+  <script src="../js/common.js"></script>
+</head>
+<body>
+
+<form action="">
+  <fieldset>
+
+    <!-- wrap -->
+    <div class="wrap wrap_pop">
+      <!-- wrap_content -->
+      <div class="wrap_content">
+        <div class="content">
+          <h1 class="page_step">Test 결과 상세 확인</h1>
+
+          <!-- box_search -->
+          <div class="box_search search_type1">
+            <div class="row">
+              <div class="item">
+                <span class="txt">서비스</span>
+                <div class="select_area w_160"> <!-- 사이즈별 클래스 제어 w_160 -->
+                  <select name="" id="" required disabled>
+                    <option value="">전체</option>
+                    <option value="" selected>NUGU 상담봇</option>
+                    <option value="">말로하는 AI상담</option>
+                  </select>
+                </div>
+              </div>
+  
+              <div class="item">
+                <span class="txt">종류</span>
+                <input type="text" class="inp" style="width:160px;" placeholder="종류" value="배포" disabled>
+              </div>
+  
+              <div class="item">
+                <span class="txt">이름</span>
+                <input type="text" class="inp" style="width:258px;" placeholder="이름" value="배포명A" disabled>
+              </div>
+
+              <div class="item">
+                <span class="txt">실행자</span>
+                <input type="text" class="inp" style="width:258px;" placeholder="실행자" value="ID" disabled>
+              </div>
+
+              <div class="item">
+                <span class="txt">결과</span>
+                <input type="text" class="inp" style="width:160px;" placeholder="결과" value="실패" disabled>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="item">
+                <span class="txt">설명</span>
+                <input type="text" class="inp" style="width:1028px;" placeholder="설명" value="배포명A에 대한 설명 설명 설명" disabled>
+              </div>
+            </div>
+          </div>
+          <!-- //box_search -->
+
+          <div class="box_info">
+            <div class="txt_total">
+              <em>총</em>
+              <span>실행<strong class="c_blue">105</strong></span>
+              <span>성공<strong class="c_green">102</strong></span>
+              <span>실패<strong class="c_red">3</strong></span>
+            </div>
+            <span class="txt_date">실행 시 2023.06.05 14:12~2023.06.05 14:52</span>
+          </div>
+
+          <!-- wrap_table -->
+          <div class="wrap_table">
+            <table class="tbl_type1">
+              <caption>Test 결과 상세 확인</caption>
+              <colgroup>
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scrope="col">seq</th>
+                  <th scrope="col">이름</th>
+                  <th scrope="col">svc_mgmt_num</th>
+                  <th scrope="col">svc_num</th>
+                  <th scrope="col">cust_num</th>
+                  <th scrope="col">센터명</th>
+                  <th scrope="col">Test Cace 정보</th>
+                  <th scrope="col">상태</th>
+                  <th scrope="col"><button type="button" class="btn_sort">결과<i class="ico"></i></button></th> <!-- 결과 정렬 버튼 -->
+                  <th scrope="col">task_result</th>
+                  <th scrope="col">eai</th>
+                  <th scrope="col">로그</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Test Case명</td>
+                  <td>000-000-0000</td>
+                  <td>000-000-0000</td>
+                  <td>000-000-0000</td>
+                  <td>센터명터명</td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                  <td>DONE</td>
+                  <td>성공</td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Test Case명</td>
+                  <td>000-000-0000</td>
+                  <td>000-000-0000</td>
+                  <td>000-000-0000</td>
+                  <td>센터명터명</td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                  <td>DONE</td>
+                  <td><a href="#" class="btn btn_failure">실패</a></td> <!-- 실패 일때 버튼으로 처리 -->
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Test Case명</td>
+                  <td>000-000-0000</td>
+                  <td>000-000-0000</td>
+                  <td>000-000-0000</td>
+                  <td>센터명터명</td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                  <td>DONE</td>
+                  <td>성공</td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Test Case명</td>
+                  <td>000-000-0000</td>
+                  <td>000-000-0000</td>
+                  <td>000-000-0000</td>
+                  <td>센터명터명</td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                  <td>DONE</td>
+                  <td>성공</td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Test Case명</td>
+                  <td>000-000-0000</td>
+                  <td>000-000-0000</td>
+                  <td>000-000-0000</td>
+                  <td>센터명터명</td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                  <td>DONE</td>
+                  <td>성공</td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Test Case명</td>
+                  <td>000-000-0000</td>
+                  <td>000-000-0000</td>
+                  <td>000-000-0000</td>
+                  <td>센터명터명</td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                  <td>DONE</td>
+                  <td>성공</td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Test Case명</td>
+                  <td>000-000-0000</td>
+                  <td>000-000-0000</td>
+                  <td>000-000-0000</td>
+                  <td>센터명터명</td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                  <td>DONE</td>
+                  <td>성공</td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>Test Case명</td>
+                  <td>000-000-0000</td>
+                  <td>000-000-0000</td>
+                  <td>000-000-0000</td>
+                  <td>센터명터명</td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                  <td>DONE</td>
+                  <td>성공</td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>Test Case명</td>
+                  <td>000-000-0000</td>
+                  <td>000-000-0000</td>
+                  <td>000-000-0000</td>
+                  <td>센터명터명</td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                  <td>DONE</td>
+                  <td>성공</td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>Test Case명</td>
+                  <td>000-000-0000</td>
+                  <td>000-000-0000</td>
+                  <td>000-000-0000</td>
+                  <td>센터명터명</td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                  <td>DONE</td>
+                  <td>성공</td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                  <td><a href="#" class="btn btn_primary">확인</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //wrap_table -->
+
+          <div class="btn_bottom">
+            <a href="#" class="btn btn_large btn_default">닫기</a>
+          </div>
+        </div>
+
+      </div>
+      <!-- //wrap_content -->
+    </div>
+    <!--//wrap -->
+
+  </fieldset>
+</form>
+
+</body>
+</html>

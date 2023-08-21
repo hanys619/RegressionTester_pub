@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>NUGU Interactive Regression Tester</title>
+  <!-- font CSS -->
+  <link rel="stylesheet" href="../font/pretendard/pretendard.css">
+  <!-- datepicker CSS -->
+  <link rel="stylesheet" href="../css/flatpickr.min.css">
+  <!-- select CSS -->
+  <link rel="stylesheet" href="../css/nice-select.css">
+  <!-- common CSS -->
+  <link rel="stylesheet" href="../css/common.css">
+  <!-- jquery JS -->
+  <script src="../js/jquery-3.2.1.min.js"></script>
+  <!-- datepicker JS -->
+  <script src="../js/flatpickr.min.js"></script>
+  <script src="../js/flatpickr.minMaxTimePlugin.min.js"></script>
+  <script src="../js/ko.js"></script>
+  <!-- select JS -->
+  <script src="../js/jquery.nice-select.min.js"></script>
+   <!-- common JS -->
+  <script src="../js/common.js"></script>
+</head>
+<body>
+
+<a href="#" class="btn_pop_open btn_pw" onclick="view_layer('pop_pw')">비밀번호변경</a> <!-- pop_pw 호출 -->
+
+<!-- pop : 비밀번호변경 -->
+<div class="wrap_layer" id="pop_pw">
+  <div class="pop_inner w_400"> <!-- 팝업너비 w_400 -->
+    <div class="pop_top">
+      <h2 class="tit">비밀번호 변경</h2>
+      <a role="button" class="btn_close" onclick="close_layer('pop_pw');">닫기</a>
+    </div>
+
+    <div class="pop_box">
+      <div class="pop_cont pw_change">
+        <form action="">
+          <fieldset>
+            <legend>비밀번호 변경</legend>
+
+            <div class="item"> <!-- 에러시 클래스 : error -->
+              <em class="tit">현재 비밀번호</em>
+              <input type="text" class="inp" style="width:100%;" placeholder="현재 비밀번호를 입력해주세요.">
+              <p class="txt_error">현재 비밀번호가 일치하지 않습니다..</p>
+            </div>
+
+            <div class="item">
+              <em class="tit">새 비밀번호</em>
+              <input type="text" class="inp" style="width:100%;" placeholder="새 비밀번호를 입력해주세요.">
+              <p class="txt_error txt_display">8자~20자로 영문, 숫자, 특수문자가 포함되어야 합니다.</p>
+            </div>
+
+            <div class="item">
+              <em class="tit">새 비밀번호 확인</em>
+              <input type="password" class="inp" style="width:100%;" placeholder="새 비밀번호를 다시 입력해주세요.">
+              <p class="txt_error">새 비밀번호와 동일한 비밀번호를 입력해주세요.</p>
+            </div>
+
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="btn_area align_c mt4">
+        <a role="button" class="btn btn_large btn_default" onclick="close_layer('pop_pw');">취소</a>
+        <a role="button" class="btn btn_large btn_primary" onclick="close_layer('pop_pw');" tabindex="0">확인</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //pop : 비밀번호변경 -->
+</body>
+</html>

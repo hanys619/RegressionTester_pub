@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>NUGU Interactive Regression Tester</title>
+  <!-- font CSS -->
+  <link rel="stylesheet" href="../font/pretendard/pretendard.css">
+  <!-- datepicker CSS -->
+  <link rel="stylesheet" href="../css/flatpickr.min.css">
+  <!-- select CSS -->
+  <link rel="stylesheet" href="../css/nice-select.css">
+  <!-- common CSS -->
+  <link rel="stylesheet" href="../css/common.css">
+  <!-- jquery JS -->
+  <script src="../js/jquery-3.2.1.min.js"></script>
+  <!-- datepicker JS -->
+  <script src="../js/flatpickr.min.js"></script>
+  <script src="../js/flatpickr.minMaxTimePlugin.min.js"></script>
+  <script src="../js/ko.js"></script>
+  <!-- select JS -->
+  <script src="../js/jquery.nice-select.min.js"></script>
+   <!-- common JS -->
+  <script src="../js/common.js"></script>
+</head>
+<body>
+
+<form action="">
+  <fieldset>
+
+    <!-- wrap -->
+    <div class="wrap">
+      <!-- wrap_lnb -->
+      <div class="wrap_lnb">
+        <div class="box_logo">
+          <strong class="logo">NUGU Interactive<br>Regression Tester</strong>
+        </div>
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="#"><i class="icon ico_1">icon</i><span class="txt">배포 관리 및 실행</span></a>
+            </li>
+            <li>
+            <a href="#"><i class="icon ico_2">icon</i><span class="txt">Test Case 관리 및 실행</span></a>
+            </li>
+            <li>
+              <a href="#"><i class="icon ico_3">icon</i><span class="txt">그룹 관리 및 실행</span></a>
+            </li>
+            <li>
+              <a href="#"><i class="icon ico_4">icon</i><span class="txt">Test Data 정보 관리</span></a>
+            </li>
+            <li>
+              <a href="#"><i class="icon ico_5">icon</i><span class="txt">Test Data 번호 관리</span></a>
+            </li>
+            <li class="on">
+              <a href="#"><i class="icon ico_6">icon</i><span class="txt">Test 이력</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- //wrap_lnb -->
+
+      <!-- wrap_content -->
+      <div class="wrap_content">
+        <div class="box_header">
+          <a href="#" class="btn_login">로그아웃</a>
+          <a href="#" class="btn_pw">비밀번호변경</a>
+        </div>
+
+        <div class="content">
+          <h1 class="page_step">Test 이력</h1>
+
+          <div class="box_search search_type1">
+            <div class="wrap_calendar">
+              <input class="inp calendar_range" placeholder="기간을 선택해 주세요."> <!-- 일달력 : calendar, 기간달력 : calendar_range -->
+              <a href="#" class="ico"></a>
+            </div>
+
+            <div class="select_area w_130"> <!-- 사이즈별 클래스 제어 w_130 -->
+              <select name="" id="" required>
+                <option value="">전체</option>
+                <option value="">배포</option>
+                <option value="">Test Case</option>
+                <option value="">그룹</option>
+              </select>
+            </div>
+
+            <div class="select_area w_130"> <!-- 사이즈별 클래스 제어 w_130 -->
+              <select name="" id="" required>
+                <option value="">전체</option>
+                <option value="">NUGU 상담봇</option>
+                <option value="">말로하는 AI상담</option>
+              </select>
+            </div>
+
+            <input type="text" class="inp" style="width:200px;" placeholder="이름 또는 실행자로 검색하세요.">
+
+            <a href="#" class="btn btn_large btn_primary">검색</a>
+          </div>
+
+          <!-- wrap_table -->
+          <div class="wrap_table">
+            <table class="tbl_type1">
+              <caption>Test 이력</caption>
+              <colgroup>
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scrope="col">Test 일시</th>
+                  <th scrope="col">종류</th>
+                  <th scrope="col">서비스</th>
+                  <th scrope="col">이름</th>
+                  <th scrope="col">실행자</th>
+                  <th scrope="col">실행수</th>
+                  <th scrope="col">상태</th>
+                  <th scrope="col">결과</th>
+                  <th scrope="col">상세 확인</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2023.06.23 14:01~</td>
+                  <td>배포</td>
+                  <td>NUGU 상담봇</td>
+                  <td>배포명</td>
+                  <td>ID</td>
+                  <td>10</td>
+                  <td>run</td>
+                  <td>성공</td>
+                  <td><a href="#" class="btn btn_primary">상세 확인</a></td>
+                </tr>
+                <tr>
+                  <td>2023.06.23 10:01~2023.06.23 10:40</td>
+                  <td>Test Case</td>
+                  <td>말로하는 AI상담</td>
+                  <td class="g_name">그룹명</td>
+                  <td>administrator</td>
+                  <td>100</td>
+                  <td>Complete</td>
+                  <td><span class="point_c">실패</span></td>
+                  <td><a href="#" class="btn btn_primary">상세 확인</a></td>
+                </tr>
+                <tr>
+                  <td>2023.06.23 10:01~2023.06.23 10:40</td>
+                  <td>배포</td>
+                  <td>NUGU 상담봇</td>
+                  <td>배포명</td>
+                  <td>ID</td>
+                  <td>10</td>
+                  <td>run</td>
+                  <td>성공</td>
+                  <td><a href="#" class="btn btn_primary">상세 확인</a></td>
+                </tr>
+                <tr>
+                  <td>2023.06.23 10:01~2023.06.23 10:40</td>
+                  <td>배포</td>
+                  <td>NUGU 상담봇</td>
+                  <td>배포명</td>
+                  <td>ID</td>
+                  <td>10</td>
+                  <td>run</td>
+                  <td>성공</td>
+                  <td><a href="#" class="btn btn_primary">상세 확인</a></td>
+                </tr>
+                <tr>
+                  <td>2023.06.23 10:01~2023.06.23 10:40</td>
+                  <td>배포</td>
+                  <td>NUGU 상담봇</td>
+                  <td>배포명</td>
+                  <td>ID</td>
+                  <td>10</td>
+                  <td>run</td>
+                  <td>성공</td>
+                  <td><a href="#" class="btn btn_primary">상세 확인</a></td>
+                </tr>
+                <tr>
+                  <td>2023.06.23 10:01~2023.06.23 10:40</td>
+                  <td>배포</td>
+                  <td>NUGU 상담봇</td>
+                  <td>배포명</td>
+                  <td>ID</td>
+                  <td>10</td>
+                  <td>run</td>
+                  <td>성공</td>
+                  <td><a href="#" class="btn btn_primary">상세 확인</a></td>
+                </tr>
+                <tr>
+                  <td>2023.06.23 10:01~2023.06.23 10:40</td>
+                  <td>배포</td>
+                  <td>NUGU 상담봇</td>
+                  <td>배포명</td>
+                  <td>ID</td>
+                  <td>10</td>
+                  <td>run</td>
+                  <td>성공</td>
+                  <td><a href="#" class="btn btn_primary">상세 확인</a></td>
+                </tr>
+                <tr>
+                  <td>2023.06.23 10:01~2023.06.23 10:40</td>
+                  <td>배포</td>
+                  <td>NUGU 상담봇</td>
+                  <td>배포명</td>
+                  <td>ID</td>
+                  <td>10</td>
+                  <td>run</td>
+                  <td>성공</td>
+                  <td><a href="#" class="btn btn_primary">상세 확인</a></td>
+                </tr>
+                <tr>
+                  <td>2023.06.23 10:01~2023.06.23 10:40</td>
+                  <td>배포</td>
+                  <td>NUGU 상담봇</td>
+                  <td>배포명</td>
+                  <td>ID</td>
+                  <td>10</td>
+                  <td>run</td>
+                  <td>성공</td>
+                  <td><a href="#" class="btn btn_primary">상세 확인</a></td>
+                </tr>
+                <tr>
+                  <td>2023.06.23 10:01~2023.06.23 10:40</td>
+                  <td>배포</td>
+                  <td>NUGU 상담봇</td>
+                  <td>배포명</td>
+                  <td>ID</td>
+                  <td>10</td>
+                  <td>run</td>
+                  <td>성공</td>
+                  <td><a href="#" class="btn btn_primary">상세 확인</a></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- pagination -->
+            <div class="pagination">
+              <a href="#" class="first disable"><span class="hide">처음</span></a> <!-- 비활성화시 disable 클래스 추가 -->
+              <a href="#" class="prev disable"><span class="hide">이전</span></a>
+              <span class="paging">
+                <a href="#" class="current">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">9</a>
+                <a href="#">10</a>
+              </span>
+              <a href="#" class="next"><span class="hide">다음</span></a>
+              <a href="#" class="last"><span class="hide">끝</span></a>
+            </div>
+            <!-- //pagination -->
+          </div>
+          <!-- //wrap_table -->
+
+        </div>
+
+      </div>
+      <!-- //wrap_content -->
+    </div>
+    <!--//wrap -->
+
+  </fieldset>
+</form>
+
+</body>
+</html>

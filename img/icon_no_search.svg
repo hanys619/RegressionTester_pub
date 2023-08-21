@@ -1,0 +1,12 @@
+<svg width="120" height="104" viewBox="0 0 120 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M59.5 100c24.577 0 44.5-4.253 44.5-9.5S84.077 81 59.5 81 15 85.253 15 90.5s19.923 9.5 44.5 9.5z" fill="#F8F8F8"/>
+    <path d="M45 36a1 1 0 1 0 0 2h29a1 1 0 1 0 0-2H45zM45 42a1 1 0 1 0 0 2h29a1 1 0 1 0 0-2H45zM45 48a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2H45z" fill="#fff"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M42 17c-5.523 0-10 4.477-10 10v50c0 5.523 4.477 10 10 10h30c5.523 0 10-4.477 10-10V31h9V17H42z" fill="#E6F2FF"/>
+    <path d="M82 26.5a9.5 9.5 0 0 1 19 0V31H82v-4.5z" fill="#C2DFFF"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M72 86.987c-5.014-.26-9-4.408-9-9.487V76H20v1c0 5.523 4.477 10 10 10h42v-.013z" fill="#C2DFFF"/>
+    <path d="M41 31a1 1 0 1 0 0 2h29a1 1 0 1 0 0-2H41zM41 37a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2H41z" fill="#fff"/>
+    <circle cx="69.5" cy="56.5" r="14" stroke="#9ECDFF" stroke-width="3"/>
+    <path d="M70 49c2.224 0 4.14 1.23 5 3" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+    <path d="M80.5 66.5 84 70" stroke="#9ECDFF" stroke-width="3"/>
+    <rect x="86.828" y="67.172" width="23.343" height="8" rx="2" transform="rotate(45 86.828 67.172)" fill="#9ECDFF"/>
+</svg>

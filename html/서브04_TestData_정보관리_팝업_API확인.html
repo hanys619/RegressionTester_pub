@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>NUGU Interactive Regression Tester</title>
+  <!-- font CSS -->
+  <link rel="stylesheet" href="../font/pretendard/pretendard.css">
+  <!-- datepicker CSS -->
+  <link rel="stylesheet" href="../css/flatpickr.min.css">
+  <!-- select CSS -->
+  <link rel="stylesheet" href="../css/nice-select.css">
+  <!-- common CSS -->
+  <link rel="stylesheet" href="../css/common.css">
+  <!-- jquery JS -->
+  <script src="../js/jquery-3.2.1.min.js"></script>
+  <!-- datepicker JS -->
+  <script src="../js/flatpickr.min.js"></script>
+  <script src="../js/flatpickr.minMaxTimePlugin.min.js"></script>
+  <script src="../js/ko.js"></script>
+  <!-- select JS -->
+  <script src="../js/jquery.nice-select.min.js"></script>
+   <!-- common JS -->
+  <script src="../js/common.js"></script>
+</head>
+<body>
+
+<form action="">
+  <fieldset>
+
+    <!-- wrap -->
+    <div class="wrap wrap_pop">
+      <!-- wrap_content -->
+      <div class="wrap_content">
+        <div class="content">
+          <h1 class="page_step">Test Data 정보 API 확인 및 수정</h1>
+
+          <table class="tbl_type1 tbl_change">
+            <caption></caption>
+            <colgroup>
+              <col width="">
+              <col width="">
+              <col width="">
+              <col width="">
+              <col width="">
+              <col width="">
+            </colgroup>
+            <thead>
+              <tr>
+                <th scrope="col">svc_mgmt_num</th>
+                <th scrope="col">svc_num</th>
+                <th scrope="col">cust_num</th>
+                <th scrope="col">API 수</th>
+                <th scrope="col">설명</th>
+                <th scrope="col">테스트 목적</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>01012341234</td>
+                <td>01012341234</td>
+                <td>01012341234</td>
+                <td>5</td>
+                <td>최대스무자최대스무자최대스무자최대스무자</td>
+                <td>A , B , C</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- wrap_table -->
+          <div class="wrap_table">
+            <div class="btn_area align_r">
+              <a href="#" class="btn btn_large btn_primary btn_pop_open" onclick="view_layer('pop_msec')">waiting_msec 일괄변경</a>
+            </div>
+            <table class="tbl_type1 tbl_accodian">
+              <caption></caption>
+              <colgroup>
+                <col width="60">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="100">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scrope="col">&nbsp;</th>
+                  <th scrope="col">name</th>
+                  <th scrope="col">req_optoins</th>
+                  <th scrope="col">target_sys</th>
+                  <th scrope="col">response</th>
+                  <th scrope="col">body</th>
+                  <th scrope="col">status_code</th>
+                  <th scrope="col">waiting_msec</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>name</td>
+                  <td>req_optoins</td>
+                  <td>target_sys</td>
+                  <td class="toggle_btn">
+                    <div class="txt_head">
+                      response
+                    </div>
+                  </td>
+                  <td class="toggle_btn2">
+                    <div class="txt_head">
+                      body
+                    </div>
+                  </td>
+                  <td>status_code</td>
+                  <td><span class="inp_area"><input type="text" class="inp" value="1"></span></td>
+                </tr>
+                <tr class="toggle_view">
+                  <td colspan="8">
+                    <div class="txt_area">
+                      <textarea name="" id="" cols="100" rows="10">response response response response response</textarea>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="toggle_view2">
+                  <td colspan="8">
+                    <div class="txt_area">
+                      <textarea name="" id="" cols="100" rows="10">body body body body body</textarea>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>name</td>
+                  <td>req_optoins</td>
+                  <td>target_sys</td>
+                  <td class="toggle_btn">
+                    <div class="txt_head">
+                      response
+                    </div>
+                  </td>
+                  <td class="toggle_btn2">
+                    <div class="txt_head">
+                      body
+                    </div>
+                  </td>
+                  <td>status_code</td>
+                  <td><span class="inp_area"><input type="text" class="inp" value="1"></span></td>
+                </tr>
+                <tr class="toggle_view">
+                  <td colspan="8">
+                    <div class="txt_area">
+                      <textarea name="" id="" cols="100" rows="10">response</textarea>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="toggle_view2">
+                  <td colspan="8">
+                    <div class="txt_area">
+                      <textarea name="" id="" cols="100" rows="10">body</textarea>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>name</td>
+                  <td>req_optoins</td>
+                  <td>target_sys</td>
+                  <td class="toggle_btn">
+                    <div class="txt_head">
+                      response
+                    </div>
+                  </td>
+                  <td class="toggle_btn2">
+                    <div class="txt_head">
+                      body
+                    </div>
+                  </td>
+                  <td>status_code</td>
+                  <td><span class="inp_area"><input type="text" class="inp" value="1"></span></td>
+                </tr>
+                <tr class="toggle_view">
+                  <td colspan="8">
+                    <div class="txt_area">
+                      <textarea name="" id="" cols="100" rows="10">response</textarea>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="toggle_view2">
+                  <td colspan="8">
+                    <div class="txt_area">
+                      <textarea name="" id="" cols="100" rows="10">body</textarea>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>name</td>
+                  <td>req_optoins</td>
+                  <td>target_sys</td>
+                  <td class="toggle_btn">
+                    <div class="txt_head">
+                      response
+                    </div>
+                  </td>
+                  <td class="toggle_btn2">
+                    <div class="txt_head">
+                      body
+                    </div>
+                  </td>
+                  <td>status_code</td>
+                  <td><span class="inp_area"><input type="text" class="inp" value="1"></span></td>
+                </tr>
+                <tr class="toggle_view">
+                  <td colspan="8">
+                    <div class="txt_area">
+                      <textarea name="" id="" cols="100" rows="10">response</textarea>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="toggle_view2">
+                  <td colspan="8">
+                    <div class="txt_area">
+                      <textarea name="" id="" cols="100" rows="10">body</textarea>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>name</td>
+                  <td>req_optoins</td>
+                  <td>target_sys</td>
+                  <td class="toggle_btn">
+                    <div class="txt_head">
+                      response
+                    </div>
+                  </td>
+                  <td class="toggle_btn2">
+                    <div class="txt_head">
+                      body
+                    </div>
+                  </td>
+                  <td>status_code</td>
+                  <td><span class="inp_area"><input type="text" class="inp" value="1"></span></td>
+                </tr>
+                <tr class="toggle_view">
+                  <td colspan="8">
+                    <div class="txt_area">
+                      <textarea name="" id="" cols="100" rows="10">response</textarea>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="toggle_view2">
+                  <td colspan="8">
+                    <div class="txt_area">
+                      <textarea name="" id="" cols="100" rows="10">body</textarea>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //wrap_table -->
+
+          <div class="btn_bottom">
+            <a href="#" class="btn btn_large btn_default">닫기</a>
+            <a href="#" class="btn btn_large btn_primary">수정</a>
+          </div>
+        </div>
+      </div>
+      <!-- //wrap_content -->
+    </div>
+    <!--//wrap -->
+
+  </fieldset>
+</form>
+
+<!-- pop : waiting_msec 일괄변경 -->
+<div class="pop_wrap" id="pop_msec">
+  <div class="pop_inner w_400"> <!-- 팝업너비 w_400 -->
+    <div class="pop_top">
+      <h2 class="tit">waiting_msec 일괄변경</h2>
+      <a role="button" class="btn_close" onclick="close_layer('pop_msec');">닫기</a>
+    </div>
+
+    <div class="pop_box">
+      <div class="pop_cont">
+        <form action="">
+          <fieldset>
+            <legend>waiting_msec 일괄변경</legend>
+            <span class="txt">waiting_msec</span>
+            <input type="text" class="inp" style="width:360px;" placeholder="msec" value="">
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="btn_area align_c">
+        <a role="button" class="btn btn_large btn_default" onclick="close_layer('pop_msec');">취소</a>
+        <a role="button" class="btn btn_large btn_primary" onclick="close_layer('pop_msec');">변경</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- //pop : waiting_msec 일괄변경 -->
+
+</body>
+</html>
