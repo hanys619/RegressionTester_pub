@@ -1,4 +1,6 @@
 $(document).ready(function(){
+	$('.wrap').css('height', $(window).height());
+	$('.wrap').css('min-height', $('.wrap_content').height());
 	/* lnb */
 	$('.wrap_lnb .menu a').click(function(){
 		$(this).parents('li').addClass('on').siblings('li').removeClass('on');
@@ -88,6 +90,14 @@ $(document).ready(function(){
 	/* 문자 치열 정의 추가 */
 	$('.btn_add_area .btn_add').click(function(){
 		$(this).parent().prev('.tbl_change').append('<tr><td><input type="text" class="inp" value=""></td><td><input type="text" class="inp" value=""></td><td><button type="button" class="btn_del">삭제</button></td></tr>');
+	});
+
+	/* 상세 내용 추가 */ 
+	$('.tbl_add').on('click', '.btn_add', function(){
+		$(this).parent().parent().after('<tr><th scope="row"></th><td><div class="select_area w_100"><select name="" id="" required><option value="">DTMF</option><option value="" selected>STT</option></select></div></td><td><div class="textarea"><textarea name="" id="" cols="100" rows="2"></textarea></div></td><td><button type="button" class="btn_del">삭제</button></td><td><button type="button" class="btn_add">추가</button></td></tr>');
+		$('select:not(.ignore)').niceSelect({
+			refresh:'true'
+		});
 	});
 
 	var del = function(target) {

@@ -33,7 +33,7 @@
       <!-- wrap_content -->
       <div class="wrap_content">
         <div class="content">
-          <h1 class="page_step">배포 확인 및 수정</h1>
+          <h1 class="page_step">배포 복사</h1>
 
           <!-- box_search -->
           <div class="box_search search_type2">
@@ -49,12 +49,19 @@
                 </div>
               </div>
 
-              <div class="item">
+              <div class="item item_type2">
                 <span class="txt required">배포명</span> <!-- 필수입력항목 required 클리스 추가 -->
-                <input type="text" class="inp" placeholder="배포명" value="배포명" disabled>
+                <input type="text" class="inp" placeholder="배포명" value="Test CaseA" disabled>
+              </div>
+
+              <div class="item">
+                <span class="txt">복사 일시</span>
+                <div class="radio">
+                  <label for="chkA" class="txt_label"><input type="radio" id="chkA" name="rdo" checked><i></i>기존 배포와 동일한 일시로 복사</label>
+                  <label for="chkB" class="txt_label"><input type="radio" id="chkB" name="rdo"><i></i>현재 일시로 복사</label>
+                </div>
               </div>
             </div>
-
             <div class="row">
               <div class="item">
                 <span class="txt">설명</span>
@@ -69,7 +76,7 @@
           <!-- wrap_table -->
           <div class="wrap_table">
             <table class="tbl_type1">
-              <caption>배포 확인 및 수정</caption>
+              <caption>배포 복사</caption>
               <colgroup>
                 <col width="">
                 <col width="20%">                
@@ -325,7 +332,7 @@
 
           <div class="btn_bottom">
             <a href="#" class="btn btn_large btn_default">닫기</a>
-            <a href="#" class="btn btn_large btn_primary">수정</a>
+            <a href="#" class="btn btn_large btn_primary">확인</a>
           </div>
         </div>
 

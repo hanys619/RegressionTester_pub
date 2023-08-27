@@ -33,7 +33,7 @@
       <!-- wrap_content -->
       <div class="wrap_content">
         <div class="content">
-          <h1 class="page_step">Test Case 확인</h1>
+          <h1 class="page_step">Test Case 복사</h1>
 
           <!-- box_search -->
           <div class="box_search search_type2">
@@ -43,41 +43,49 @@
                 <div class="select_area w_160"> <!-- 사이즈별 클래스 제어 w_160 -->
                   <select name="" id="" required disabled>
                     <option value="">전체</option>
-                    <option value="">NUGU 상담봇</option>
-                    <option value="" selected>말로하는 AI상담</option>
+                    <option value="" selected>NUGU 상담봇</option> <!-- 선택된값 selected 추가 -->
+                    <option value="">말로하는 AI상담</option>
                   </select>
                 </div>
               </div>
-  
-              <div class="item">
-                <span class="txt required">Test Case명</span> <!-- 필수입력항목 required 클래스 추가 -->
-                <input type="text" class="inp" placeholder="배포명" value="Test CaseA" disabled>
-              </div>
-            </div>
 
-             <div class="row">
+              <div class="item item_type2">
+                <span class="txt required">배포명</span> <!-- 필수입력항목 required 클리스 추가 -->
+                <input type="text" class="inp" placeholder="배포명" value="Test CaseA">
+              </div>
+
               <div class="item">
-                <span class="txt">설명</span>
-                <div class="textarea disabled">
-                  <textarea name="" id="" cols="100" rows="2" disabled>설명 설명 설명</textarea>
+                <span class="txt">복사 일시</span>
+                <div class="radio">
+                  <label for="chkA" class="txt_label"><input type="radio" id="chkA" name="rdo" checked><i></i>기존 배포와 동일한 일시로 복사</label>
+                  <label for="chkB" class="txt_label"><input type="radio" id="chkB" name="rdo"><i></i>현재 일시로 복사</label>
                 </div>
               </div>
             </div>
             
             <div class="row">
               <div class="item">
+                <span class="txt">설명</span>
+                <div class="textarea">
+                  <textarea name="" id="" cols="100" rows="2"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="item">
                 <span class="txt">메시지 수</span>
-                <input type="text" class="inp" style="width:160px;" placeholder="메시지 수" value="10개" disabled>
+                <input type="text" class="inp" style="width:160px;" placeholder="메시지 수" value="10개">
               </div>
 
               <div class="item">
                 <span class="txt">Test Data 정보</span>
-                <input type="text" class="inp" style="width:160px;" placeholder="Test Data 정보" value="svc_mgmt_num" disabled>
+                <input type="text" class="inp" style="width:160px;" placeholder="Test Data 정보" value="svc_mgmt_num">
               </div>
 
               <div class="item">
                 <span class="txt">센터명</span>
-                <input type="text" class="inp" placeholder="센터명" value="센터명" disabled>
+                <input type="text" class="inp" placeholder="센터명" value="센터명">
               </div>
             </div>
           </div>
@@ -88,45 +96,55 @@
           <table class="tbl_type1 tbl_change">
             <caption>문자 치열 정의</caption>
             <colgroup>
-              <col width="50%">
-              <col width="50%">
+              <col width="">
+              <col width="">
+              <col width="70">
             </colgroup>
             <thead>
               <tr>
                 <th scrope="col">현재 text</th>
                 <th scrope="col">변경 text</th>
+                <th scrope="col">삭제</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><input type="text" class="inp" value="#TEST_ID#" disabled></td>
-                <td><input type="text" class="inp" value="#TESTTEST_ID#" disabled></td>
+                <td><input type="text" class="inp" value="#TEST_ID#"></td>
+                <td><input type="text" class="inp" value="#TESTTEST_ID#"></td>
+                <td><button type="button" class="btn_del">삭제</button></td>
               </tr>
               <tr>
-                <td><input type="text" class="inp" value="#TEST_ID#" disabled></td>
-                <td><input type="text" class="inp" value="#TESTTEST_ID#" disabled></td>
+                <td><input type="text" class="inp" value="#TEST_ID#"></td>
+                <td><input type="text" class="inp" value="#TESTTEST_ID#"></td>
+                <td><button type="button" class="btn_del">삭제</button></td>
               </tr>
             </tbody>
           </table>
-
+          <div class="btn_add_area">
+            <button type="button" class="btn_add">추가</button>
+          </div>
 
           <!-- wrap_table -->
           <div class="wrap_table">
             <div class="btn_area align_r">
               <a href="#" class="btn btn_large btn_primary">예상 결과 확인</a>
             </div>
-            <table class="tbl_type1">
+            <table class="tbl_type1 tbl_add">
               <caption>상세 내용</caption>
               <colgroup>
                 <col width="60">
                 <col width="20%">
                 <col width="">
+                <col width="60">
+                <col width="60">
               </colgroup>
               <thead>
                 <tr>
                   <th scrope="col">Seq</th>
                   <th scrope="col">Type</th>
                   <th scrope="col">Message</th>
+                  <th scrope="col">삭제</th>
+                  <th scrope="col">추가</th>
                 </tr>
               </thead>
               <tbody>
@@ -134,97 +152,109 @@
                   <th scope="row">1</th>
                   <td>
                     <div class="select_area w_100"> <!-- 사이즈별 클래스 제어 w_100 -->
-                      <select name="" id="" required disabled>
+                      <select name="" id="" required>
                         <option value="">DTMF</option>
                         <option value="" selected>STT</option>
                       </select>
                     </div>
                   </td>
                   <td>
-                    <div class="textarea disable">
-                      <textarea name="" id="" cols="100" rows="2" disabled>약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 </textarea>
+                    <div class="textarea">
+                      <textarea name="" id="" cols="100" rows="2">약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 </textarea>
                     </div>
                   </td>
+                  <td><button type="button" class="btn_del">삭제</button></td>
+                  <td><button type="button" class="btn_add">추가</button></td>
                 </tr>
                 <tr>
                   <th scope="row">2</th>
                   <td>
                     <div class="select_area w_100"> <!-- 사이즈별 클래스 제어 w_100 -->
-                      <select name="" id="" required disabled>
+                      <select name="" id="" required>
                         <option value="" selected>DTMF</option>
                         <option value="">STT</option>
                       </select>
                     </div>
                   </td>
                   <td>
-                    <div class="textarea disable">
-                      <textarea name="" id="" cols="100" rows="2" disabled>다시 설명해주세요</textarea>
+                    <div class="textarea">
+                      <textarea name="" id="" cols="100" rows="2">다시 설명해주세요</textarea>
                     </div>
                   </td>
+                  <td><button type="button" class="btn_del">삭제</button></td>
+                  <td><button type="button" class="btn_add">추가</button></td>
                 </tr>
                 <tr>
                   <th scope="row">3</th>
                   <td>
                     <div class="select_area w_100"> <!-- 사이즈별 클래스 제어 w_100 -->
-                      <select name="" id="" required disabled>
+                      <select name="" id="" required>
                         <option value="">DTMF</option>
                         <option value="" selected>STT</option>
                       </select>
                     </div>
                   </td>
                   <td>
-                    <div class="textarea disable">
-                      <textarea name="" id="" cols="100" rows="2" disabled>네</textarea>
+                    <div class="textarea">
+                      <textarea name="" id="" cols="100" rows="2">네</textarea>
                     </div>
                   </td>
+                  <td><button type="button" class="btn_del">삭제</button></td>
+                  <td><button type="button" class="btn_add">추가</button></td>
                 </tr>
                 <tr>
                   <th scope="row">4</th>
                   <td>
                     <div class="select_area w_100"> <!-- 사이즈별 클래스 제어 w_100 -->
-                      <select name="" id="" required disabled>
+                      <select name="" id="" required>
                         <option value="">DTMF</option>
                         <option value="" selected>STT</option>
                       </select>
                     </div>
                   </td>
                   <td>
-                    <div class="textarea disable">
-                      <textarea name="" id="" cols="100" rows="2" disabled>약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 </textarea>
+                    <div class="textarea">
+                      <textarea name="" id="" cols="100" rows="2">약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 약정 연장해주세요 </textarea>
                     </div>
                   </td>
+                  <td><button type="button" class="btn_del">삭제</button></td>
+                  <td><button type="button" class="btn_add">추가</button></td>
                 </tr>
                 <tr>
                   <th scope="row">5</th>
                   <td>
                     <div class="select_area w_100"> <!-- 사이즈별 클래스 제어 w_100 -->
-                      <select name="" id="" required disabled>
+                      <select name="" id="" required>
                         <option value="" selected>DTMF</option>
                         <option value="">STT</option>
                       </select>
                     </div>
                   </td>
                   <td>
-                    <div class="textarea disable">
-                      <textarea name="" id="" cols="100" rows="2" disabled>다시 설명해주세요</textarea>
+                    <div class="textarea">
+                      <textarea name="" id="" cols="100" rows="2">다시 설명해주세요</textarea>
                     </div>
                   </td>
+                  <td><button type="button" class="btn_del">삭제</button></td>
+                  <td><button type="button" class="btn_add">추가</button></td>
                 </tr>
                 <tr>
                   <th scope="row">6</th>
                   <td>
                     <div class="select_area w_100"> <!-- 사이즈별 클래스 제어 w_100 -->
-                      <select name="" id="" required disabled>
+                      <select name="" id="" required>
                         <option value="">DTMF</option>
                         <option value="" selected>STT</option>
                       </select>
                     </div>
                   </td>
                   <td>
-                    <div class="textarea disable">
-                      <textarea name="" id="" cols="100" rows="4" disabled>네</textarea>
+                    <div class="textarea">
+                      <textarea name="" id="" cols="100" rows="4">네</textarea>
                     </div>
                   </td>
+                  <td><button type="button" class="btn_del">삭제</button></td>
+                  <td><button type="button" class="btn_add">추가</button></td>
                 </tr>
               </tbody>
             </table>
@@ -233,8 +263,10 @@
 
           <div class="btn_bottom">
             <a href="#" class="btn btn_large btn_default">닫기</a>
+            <a href="#" class="btn btn_large btn_primary">확인</a>
           </div>
         </div>
+
       </div>
       <!-- //wrap_content -->
     </div>
