@@ -1,6 +1,11 @@
 $(document).ready(function(){
 	$('.wrap').css('height', $(window).height());
 	$('.wrap').css('min-height', $('.wrap_content').height());
+	/* resize */
+	$(window).on('resize', function(){
+		$('.wrap').css('height', $(window).height());
+		$('.wrap').css('min-height', $('.wrap_content').height());
+	});
 	/* lnb */
 	$('.wrap_lnb .menu a').click(function(){
 		$(this).parents('li').addClass('on').siblings('li').removeClass('on');
