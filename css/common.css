@@ -131,7 +131,7 @@ input[type="checkbox"]:checked:after {display:block;}
 .tbl_type1 .checkbox input[type="checkbox"] + i {margin-top:0;}
 .tbl_type1 tfoot th {font-weight:normal;background-color:#f8f9fa;}
 .tbl_type1 tfoot td {text-align:center;}
-.tbl_type1 tbody th {line-height:16px;}
+.tbl_type1 tbody th {line-height:16px;border-bottom-color:#ebebeb;}
 .tbl_type1 tbody td {min-width:30px;white-space:nowrap;}
 .tbl_type1 tbody .align_left {padding-left:20px;}
 .tbl_type1 .inp {width:100%;height:26px;font-size:11px;}
@@ -296,6 +296,9 @@ input[type="checkbox"]:checked:after {display:block;}
 .btn_tag_close:after {content:'';display:block;clear:both;position:absolute;top:50%;right:8px;width:1.5px;height:12px;margin-top:-6px;background-color:#9e9e9e;}
 .btn_tag_close:before {transform:rotate(45deg);}
 .btn_tag_close:after {transform:rotate(-45deg);}
+.box_talk {margin:15px 0 20px 0;border:1px solid #ebebeb;border-radius:6px;}
+.box_talk .tit {height:50px;text-align:center;font-weight:600;font-size:15px;line-height:50px;}
+.box_talk .txt {padding:0 0 15px 15px;white-space:pre-line;font-size:12px;line-height:18px;color:#333;background-color:#eef4fb;}
 
 /* popup */
 .wrap_pop {position:relative;width:100%;min-width:1000px;min-height:700px;background-color:#fff;}
@@ -312,9 +315,12 @@ input[type="checkbox"]:checked:after {display:block;}
 .wrap_pop .box_search .item {display:flex;flex-direction:column;flex-wrap:wrap;}
 .wrap_pop .box_search .item_type2 {flex:8 1 0;}
 .wrap_pop .box_search .item_type3 {flex:25 1 0;}
-.wrap_pop .box_search .item .radio {display:flex;flex-direction:row;flex-wrap:nowrap;min-width:300px;margin:4px 0 4px 4px;text-align:left;}
+.wrap_pop .box_search .item .radio {display:flex;flex-direction:row;flex-wrap:nowrap;min-width:300px;margin:4px 0 4px 4px;text-align:left;align-items:center;}
+.wrap_pop .box_search .item .radio_type2 {height:32px;margin:0 0 4px 4px;}
 .wrap_pop .nice-select,
 .wrap_pop .box_search .inp {margin:0 4px;}
+.wrap_pop .box_search .wrap_calendar {min-width:330px;text-align:left;}
+.wrap_pop .box_search .wrap_calendar .inp {margin-right:-30px;}
 .wrap_pop .nice-select {border-color:#e0e0e0;}
 .wrap_pop .btn_bottom {position:fixed;bottom:0;left:0;width:100%;height:68px;padding:16px 0 20px 0;text-align:center;box-sizing:border-box;border-top:1px solid #ebebeb;background-color:#fff;z-index:13;}
 .wrap_pop .nodata,

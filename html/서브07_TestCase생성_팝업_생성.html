@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>NUGU Interactive Regression Tester</title>
+  <!-- font CSS -->
+  <link rel="stylesheet" href="../font/pretendard/pretendard.css">
+  <!-- datepicker CSS -->
+  <link rel="stylesheet" href="../css/flatpickr.min.css">
+  <!-- select CSS -->
+  <link rel="stylesheet" href="../css/nice-select.css">
+  <!-- common CSS -->
+  <link rel="stylesheet" href="../css/common.css">
+  <!-- jquery JS -->
+  <script src="../js/jquery-3.2.1.min.js"></script>
+  <!-- datepicker JS -->
+  <script src="../js/flatpickr.min.js"></script>
+  <script src="../js/flatpickr.minMaxTimePlugin.min.js"></script>
+  <script src="../js/ko.js"></script>
+  <!-- select JS -->
+  <script src="../js/jquery.nice-select.min.js"></script>
+   <!-- common JS -->
+  <script src="../js/common.js"></script>
+</head>
+<body>
+
+<form action="">
+  <fieldset>
+
+    <!-- wrap -->
+    <div class="wrap wrap_pop">
+      <!-- wrap_content -->
+      <div class="wrap_content">
+        <div class="content">
+          <h1 class="page_step">Test Case 생성</h1>
+
+          <!-- box_search -->
+          <div class="box_search search_type2">
+            <div class="row">
+              <div class="item">
+                <span class="txt">서비스</span>
+                <div class="select_area w_160"> <!-- 사이즈별 클래스 제어 w_160 -->
+                  <select name="" id="" required>
+                    <option value="">전체</option>
+                    <option value="">NUGU 상담봇</option>
+                    <option value="">말로하는 AI상담</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="item">
+                <span class="txt required">이름</span> <!-- 필수입력항목 required 클리스 추가 -->
+                <input type="text" class="inp" placeholder="Test Case명">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="item">
+                <span class="txt">대상 일자</span>
+                <div class="wrap_calendar">
+                  <input class="inp calendar_range" placeholder="기간을 선택해 주세요."> <!-- 일달력 : calendar, 기간달력 : calendar_range -->
+                  <a href="#" class="ico"></a>
+                </div>
+              </div>
+
+              <div class="item">
+                <span class="txt">센터명</span>
+                <div class="radio radio_type2">
+                  <label for="chkA" class="txt_label"><input type="radio" id="chkA" name="rdo" checked="checked"><i></i>랜덤</label>
+                  <label for="chkB" class="txt_label"><input type="radio" id="chkB" name="rdo"><i></i>선택</label>
+                  <div class="select_area w_160"> <!-- 사이즈별 클래스 제어 w_160 -->
+                    <select name="" id="" required>
+                      <option value="">A센터</option>
+                      <option value="">센터명</option>
+                      <option value="">센터명</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <span class="txt">설정</span>
+                <div class="radio radio_type2">
+                  <label for="chkA_1" class="txt_label"><input type="radio" id="chkA_1" name="rdo1" checked="checked"><i></i>Test Case</label>
+                  <label for="chkB_1" class="txt_label"><input type="radio" id="chkB_1" name="rdo1"><i></i>신규그룹</label>
+                  <label for="chkC_1" class="txt_label"><input type="radio" id="chkC_1" name="rdo1"><i></i>신규배포</label>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- //box_search -->
+
+          <div class="btn_bottom">
+            <a href="#" class="btn btn_large btn_default">닫기</a>
+            <a href="#" class="btn btn_large btn_primary">생성</a>
+          </div>
+        </div>
+
+      </div>
+      <!-- //wrap_content -->
+    </div>
+    <!--//wrap -->
+
+  </fieldset>
+</form>
+
+</body>
+</html>
