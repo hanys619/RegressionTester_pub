@@ -248,6 +248,7 @@ input[type="checkbox"]:checked:after {display:block;}
 .wrap_lnb .ico_4 {background:url(../img/icon_menu_04.svg) no-repeat 0 0;background-size:24px 24px;}
 .wrap_lnb .ico_5 {background:url(../img/icon_menu_05.svg) no-repeat 0 0;background-size:24px 24px;}
 .wrap_lnb .ico_6 {background:url(../img/icon_menu_06.svg) no-repeat 0 0;background-size:24px 24px;}
+.wrap_lnb .ico_7 {background:url(../img/icon_menu_07.svg) no-repeat 0 0;background-size:24px 24px;}
 
 /* header */
 .box_header {position:relative;height:60px;padding:0 20px;text-align:right;border-bottom:1px solid #dce8f5;box-sizing:border-box;background-color:#fff;}
