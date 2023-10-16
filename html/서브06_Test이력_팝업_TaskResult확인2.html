@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>NUGU Interactive Regression Tester</title>
+  <!-- font CSS -->
+  <link rel="stylesheet" href="../font/pretendard/pretendard.css">
+  <!-- datepicker CSS -->
+  <link rel="stylesheet" href="../css/flatpickr.min.css">
+  <!-- select CSS -->
+  <link rel="stylesheet" href="../css/nice-select.css">
+  <!-- common CSS -->
+  <link rel="stylesheet" href="../css/common.css">
+  <!-- jquery JS -->
+  <script src="../js/jquery-3.2.1.min.js"></script>
+  <!-- datepicker JS -->
+  <script src="../js/flatpickr.min.js"></script>
+  <script src="../js/flatpickr.minMaxTimePlugin.min.js"></script>
+  <script src="../js/ko.js"></script>
+  <!-- select JS -->
+  <script src="../js/jquery.nice-select.min.js"></script>
+  <!-- common JS -->
+  <script src="../js/common.js"></script>
+  <style type="text/css">
+    #output {
+      overflow:hidden;
+      margin-bottom:20px;
+      border-collapse:collapse;
+      border:1px solid #e0e0e0;
+      border-radius:6px;
+    }
+    table.diff {
+      border-radius:6px;
+      white-space:pre-wrap;
+    }
+    table.diff tbody th {
+      background:#eef4fb;
+      font-size:12px;
+      font-weight:normal;
+      border:1px solid #ccc;
+      color:#333;
+      padding:.4em .7em .4em 1.5em;
+      text-align:right;
+      vertical-align:top
+    }
+    table.diff tbody th:first-child {
+      border-left:0 none;
+    }
+    table.diff tbody tr:last-child th {
+      border-bottom:0 none;
+    }
+    table.diff tbody tr:first-child th {
+      border-top:0 none;
+    }
+    table.diff thead {
+      height:44px;
+      border-bottom:1px solid #e0e0e0;
+      background-color:#fff;
+    }
+    table.diff thead th.texttitle {
+      font-weight:600;
+      font-size:14px;
+      line-height:44px;
+      color:#333;
+      text-align:center;
+      background-color:#fff;
+    }
+    table.diff tbody td {
+      padding:0px .4em;
+      vertical-align:top;
+      font-size:13px;
+      line-height:26px;
+      color:#333;
+    }
+    table.diff .empty {
+      background-color:#e0e0e0;
+    }
+    table.diff .replace {
+      background-color:#fd8;
+    }
+    table.diff .delete {
+      background-color:#e99;
+    }
+    table.diff .skip {
+      background-color:#efefef;
+      border:1px solid #aaa;
+      border-right:1px solid #bbc;
+    }
+    table.diff .insert {
+      background-color:#9E9;
+    }
+    table.diff th.author {
+      text-align:right;
+      border-top:1px solid #bbc;
+      background:#efefef;
+    }
+  </style>
+</head>
+<body>
+
+<form action="">
+  <fieldset>
+
+    <div class="wrap wrap_pop">
+      <!-- wrap_content -->
+      <div class="wrap_content">
+        <div class="content">
+          <h1 class="page_step float_l">task_result 확인</h1>
+
+          <div class="btn_area align_r btn_update">
+            <a href="#" class="btn btn_large btn_primary">예상결과를 시험결과로 업데이트하기</a>
+          </div>
+
+          <!-- output -->
+          <div id="output"><table class="diff"><thead><tr><th></th><th class="texttitle">TC 예상결과</th><th></th><th class="texttitle">TC 시험결과</th></tr></thead><tbody><tr><th>1</th><td class="equal">{</td><th>1</th><td class="equal">{</td></tr><tr><th>2</th><td class="equal">  "callId": "#CALL_ID#",</td><th>2</th><td class="equal">  "callId": "#CALL_ID#",</td></tr><tr><th>3</th><td class="equal">  "mdn": "#CALLEE#",</td><th>3</th><td class="equal">  "mdn": "#CALLEE#",</td></tr><tr><th>4</th><td class="equal">  "acpCallResult": "SUCCESS",</td><th>4</th><td class="equal">  "acpCallResult": "SUCCESS",</td></tr><tr><th>5</th><td class="equal">  "dlpResult": {</td><th>5</th><td class="equal">  "dlpResult": {</td></tr><tr><th>6</th><td class="equal">    "code": "SUCCESS",</td><th>6</th><td class="equal">    "code": "SUCCESS",</td></tr><tr><th>7</th><td class="equal">    "data": {</td><th>7</th><td class="equal">    "data": {</td></tr><tr><th>8</th><td class="equal">      "storage_period": "T2",</td><th>8</th><td class="equal">      "storage_period": "T2",</td></tr><tr><th>9</th><td class="equal">      "consultation_cust_detail_type": "N0",</td><th>9</th><td class="equal">      "consultation_cust_detail_type": "N0",</td></tr><tr><th>10</th><td class="equal">      "consultation_task": "1",</td><th>10</th><td class="equal">      "consultation_task": "1",</td></tr><tr><th>11</th><td class="equal">      "consultation_call_info": "A4",</td><th>11</th><td class="equal">      "consultation_call_info": "A4",</td></tr><tr><th>12</th><td class="equal">      "consultation_svc_mgmt_num": "#SVC_MGMT_NUM#",</td><th>12</th><td class="equal">      "consultation_svc_mgmt_num": "#SVC_MGMT_NUM#",</td></tr><tr><th>13</th><td class="equal">      "consultation_memo": "선택약정_본인확인_신청관련안내_상담사연결",</td><th>13</th><td class="equal">      "consultation_memo": "선택약정_본인확인_신청관련안내_상담사연결",</td></tr><tr><th>14</th><td class="equal">      "consultation_result": "조회",</td><th>14</th><td class="equal">      "consultation_result": "조회",</td></tr><tr><th>15</th><td class="equal">      "consultation_svc_num": "#SVC_NUM#",</td><th>15</th><td class="equal">      "consultation_svc_num": "#SVC_NUM#",</td></tr><tr><th>16</th><td class="equal">      "consultation_type": "선택약정 신청방법/대상자/이용기간문의",</td><th>16</th><td class="equal">      "consultation_type": "선택약정 신청방법/대상자/이용기간문의",</td></tr><tr><th>17</th><td class="equal">      "consultation_ssn": "5905041",</td><th>17</th><td class="equal">      "consultation_ssn": "5905041",</td></tr><tr><th>18</th><td class="equal">      "automatic_payment_marking": "",</td><th>18</th><td class="equal">      "automatic_payment_marking": "",</td></tr><tr><th>19</th><td class="equal">      "consultation_ivr_path": "AI상담.NUGU.001.선택약정",</td><th>19</th><td class="equal">      "consultation_ivr_path": "AI상담.NUGU.001.선택약정",</td></tr><tr><th>20</th><td class="equal">      "consultation_unpaid": "S",</td><th>20</th><td class="equal">      "consultation_unpaid": "S",</td></tr><tr><th>21</th><td class="equal">      "consultation_acnt_num": "6172286663",</td><th>21</th><td class="equal">      "consultation_acnt_num": "6172286663",</td></tr><tr><th>22</th><td class="equal">      "consultation_svc_cd": "C",</td><th>22</th><td class="equal">      "consultation_svc_cd": "C",</td></tr><tr><th>23</th><td class="equal">      "consultation_ivr_auth": "T",</td><th>23</th><td class="equal">      "consultation_ivr_auth": "T",</td></tr><tr><th>24</th><td class="equal">      "dialog":"</td><th>24</th><td class="equal">      "dialog":"</td></tr><tr><th>25</th><td class="equal">C: DIALOG_INIT</td><th>25</th><td class="equal">C: DIALOG_INIT</td></tr><tr><th>26</th><td class="equal">V: 반갑습니다.</td><th>26</th><td class="equal">V: 반갑습니다.</td></tr><tr><th>27</th><td class="equal">V: SK텔레콤 AI 상담사입니다.</td><th>27</th><td class="equal">V: SK텔레콤 AI 상담사입니다.</td></tr><tr><th>28</th><td class="equal">V: 저와의 통화 내용은 녹음되며 본인이 아닌 경우 상담에 제한이 있을 수 있습니다.</td><th>28</th><td class="equal">V: 저와의 통화 내용은 녹음되며 본인이 아닌 경우 상담에 제한이 있을 수 있습니다.</td></tr><tr><th>29</th><td class="equal">V: 선택 약정 관련하여 어떤 업무를 도와드릴까요?</td><th>29</th><td class="equal">V: 선택 약정 관련하여 어떤 업무를 도와드릴까요?</td></tr><tr><th>30</th><td class="equal">C: 선택약정 가입</td><th>30</th><td class="equal">C: 선택약정 가입</td></tr><tr><th>31</th><td class="equal">V: 네, 먼저 고객 정보 확인 후에 선택 약정 관련해서 도와드리겠습니다.</td><th>31</th><td class="equal">V: 네, 먼저 고객 정보 확인 후에 선택 약정 관련해서 도와드리겠습니다.</td></tr><tr><th>32</th><td class="equal">V: 문의하실 전화번호가 #MASKED#번 맞으실까요?</td><th>32</th><td class="equal">V: 문의하실 전화번호가 #MASKED#번 맞으실까요?</td></tr><tr><th>33</th><td class="equal">C: 네</td><th>33</th><td class="equal">C: 네</td></tr><tr><th>34</th><td class="equal">V: 네, 확인 감사합니다.</td><th>34</th><td class="equal">V: 네, 확인 감사합니다.</td></tr><tr><th>35</th><td class="equal">V: 천**율 고객님 본인 되십니까?</td><th>35</th><td class="equal">V: 천**율 고객님 본인 되십니까?</td></tr><tr><th>36</th><td class="equal">C: 네</td><th>36</th><td class="equal">C: 네</td></tr><tr><th>37</th><td class="equal">V: 네, 확인 감사합니다.</td><th>37</th><td class="equal">V: 네, 확인 감사합니다.</td></tr><tr><th>38</th><td class="equal">V: 확인해보니 천**율 고객님께서는 #MASKED#부터 #MASKED#까지 선택 약정에 가입되어 25% 요금 할인 혜택을 이미 받고 계세요.</td><th>38</th><td class="equal">V: 확인해보니 천**율 고객님께서는 #MASKED#부터 #MASKED#까지 선택 약정에 가입되어 25% 요금 할인 혜택을 이미 받고 계세요.</td></tr><tr><th>39</th><td class="replace">V: 약정 기간이 종료된 후 다시 가입하거나 남은 약정 기간을 승계해 선택 약정을 신청하실 수 있는데요, 남은 약정 기간을 승계해서 선택 약정 가입을 도와드릴까요?</td><th>39</th><td class="replace">V: 약정 만료 60일 전, 30일 전, 약정이 종료된 다음날 안내 문자를 발송해드리고 있습니다. 안내 문자를 받으신 이후에 다시 신청 부탁드립니다.</td></tr><tr><th></th><td class="empty"></td><th>40</th><td class="replace">V: 선택 약정 관련해서 혹시 더 문의하실 사항 있으신가요?</td></tr><tr><th>40</th><td class="equal">C: 제가 저희 부모님 것도 가입할 수 있나요</td><th>41</th><td class="equal">C: 제가 저희 부모님 것도 가입할 수 있나요</td></tr><tr><th>41</th><td class="equal">V: 현재 성인이신 명의자 본인에 한해서만 업무 처리가 가능해서요.</td><th>42</th><td class="equal">V: 현재 성인이신 명의자 본인에 한해서만 업무 처리가 가능해서요.</td></tr><tr><th>42</th><td class="equal">V: 명의자분께서 직접 전화해 주시거나 저희 상담사와 통화해 주셔야 처리가 가능합니다.</td><th>43</th><td class="equal">V: 명의자분께서 직접 전화해 주시거나 저희 상담사와 통화해 주셔야 처리가 가능합니다.</td></tr><tr><th>43</th><td class="equal">V: 상담사를 연결해드릴까요?</td><th>44</th><td class="equal">V: 상담사를 연결해드릴까요?</td></tr><tr><th>44</th><td class="equal">C: 네 지금 해주세요</td><th>45</th><td class="equal">C: 네 지금 해주세요</td></tr><tr><th>45</th><td class="equal">V: 도와드릴 수 있는 상담사를 연결해드리겠습니다.</td><th>46</th><td class="equal">V: 도와드릴 수 있는 상담사를 연결해드리겠습니다.</td></tr><tr><th>46</th><td class="equal">V: 잠시만 기다려주세요.</td><th>47</th><td class="equal">V: 잠시만 기다려주세요.</td></tr><tr><th>47</th><td class="equal">C: hang_up</td><th>48</th><td class="equal">C: hang_up</td></tr><tr><th>48</th><td class="equal">V: #CALL_ID#",</td><th>49</th><td class="equal">V: #CALL_ID#",</td></tr><tr><th>49</th><td class="equal">      "consultation_input_tel_num": "#SVC_NUM#",</td><th>50</th><td class="equal">      "consultation_input_tel_num": "#SVC_NUM#",</td></tr><tr><th>50</th><td class="equal">      "consultation_cust_num": "#CUST_NUM#",</td><th>51</th><td class="equal">      "consultation_cust_num": "#CUST_NUM#",</td></tr><tr><th>51</th><td class="equal">      "consultation_cust_type": "01",</td><th>52</th><td class="equal">      "consultation_cust_type": "01",</td></tr><tr><th>52</th><td class="equal">      "consultation_type_code": "3513753",</td><th>53</th><td class="equal">      "consultation_type_code": "3513753",</td></tr><tr><th>53</th><td class="equal">      "consultation_ivr_path_name": "AI상담.NUGU.001.선택약정+99999{V5AB}"</td><th>54</th><td class="equal">      "consultation_ivr_path_name": "AI상담.NUGU.001.선택약정+99999{V5AB}"</td></tr><tr><th>54</th><td class="equal">    },</td><th>55</th><td class="equal">    },</td></tr><tr><th>55</th><td class="equal">    "statistics": {</td><th>56</th><td class="equal">    "statistics": {</td></tr><tr><th>56</th><td class="equal">      "stt": "",</td><th>57</th><td class="equal">      "stt": "",</td></tr><tr><th>57</th><td class="equal">      "nlu": {</td><th>58</th><td class="equal">      "nlu": {</td></tr><tr><th>58</th><td class="equal">        "result": "NOT_USE",</td><th>59</th><td class="equal">        "result": "NOT_USE",</td></tr><tr><th>59</th><td class="equal">        "pre_analyze_result": "N"</td><th>60</th><td class="equal">        "pre_analyze_result": "N"</td></tr><tr><th>60</th><td class="equal">      },</td><th>61</th><td class="equal">      },</td></tr><tr><th>61</th><td class="equal">      "retry_count": "0",</td><th>62</th><td class="equal">      "retry_count": "0",</td></tr><tr><th>62</th><td class="equal">      "scenario_state": [</td><th>63</th><td class="equal">      "scenario_state": [</td></tr><tr><th>63</th><td class="equal">        "cid_question",</td><th>64</th><td class="equal">        "cid_question",</td></tr><tr><th>64</th><td class="equal">        "check_customer_info_contract_discount",</td><th>65</th><td class="equal">        "check_customer_info_contract_discount",</td></tr><tr><th>65</th><td class="equal">        "cid_phonenumber",</td><th>66</th><td class="equal">        "cid_phonenumber",</td></tr><tr><th>66</th><td class="equal">        "check_completed",</td><th>67</th><td class="equal">        "check_completed",</td></tr><tr><th>67</th><td class="equal">        "cid_identification",</td><th>68</th><td class="equal">        "cid_identification",</td></tr><tr><th>68</th><td class="equal">        "check_completed",</td><th>69</th><td class="equal">        "check_completed",</td></tr><tr><th>69</th><td class="replace">        "cid_info",</td><th>70</th><td class="replace">        "cid_condition_not_proceed",</td></tr><tr><th></th><td class="empty"></td><th>71</th><td class="replace">        "ask_additional_question_contract_discount",</td></tr><tr><th>70</th><td class="equal">        "cid_qna",</td><th>72</th><td class="equal">        "cid_qna",</td></tr><tr><th>71</th><td class="equal">        "connect_cs_business_hours"</td><th>73</th><td class="equal">        "connect_cs_business_hours"</td></tr><tr><th>72</th><td class="equal">      ],</td><th>74</th><td class="equal">      ],</td></tr><tr><th>73</th><td class="equal">      "dialog_state": {</td><th>75</th><td class="equal">      "dialog_state": {</td></tr><tr><th>74</th><td class="equal">        "next_state": "DS_END",</td><th>76</th><td class="equal">        "next_state": "DS_END",</td></tr><tr><th>75</th><td class="equal">        "curr_state": "DS_START",</td><th>77</th><td class="equal">        "curr_state": "DS_START",</td></tr><tr><th>76</th><td class="equal">        "ans_state": "DS_ANS_HANGUP"</td><th>78</th><td class="equal">        "ans_state": "DS_ANS_HANGUP"</td></tr><tr><th>77</th><td class="equal">      },</td><th>79</th><td class="equal">      },</td></tr><tr><th>78</th><td class="equal">      "event": "hang_up"</td><th>80</th><td class="equal">      "event": "hang_up"</td></tr><tr><th>79</th><td class="equal">    }</td><th>81</th><td class="equal">    }</td></tr><tr><th>80</th><td class="equal">  },</td><th>82</th><td class="equal">  },</td></tr><tr><th>81</th><td class="equal">  "callStartDateTime": "#MASKED#",</td><th>83</th><td class="equal">  "callStartDateTime": "#MASKED#",</td></tr><tr><th>82</th><td class="equal">  "callEndDateTime": "#MASKED#"</td><th>84</th><td class="equal">  "callEndDateTime": "#MASKED#"</td></tr><tr><th>83</th><td class="equal">}</td><th>85</th><td class="equal">}</td></tr><tr><th>84</th><td class="equal"></td><th>86</th><td class="equal"></td></tr></tbody></table></div>
+          <!-- //output -->
+
+          <div class="btn_bottom">
+            <a href="#" class="btn btn_large btn_default">닫기</a>
+          </div>
+        </div>
+
+      </div>
+      <!-- //wrap_content -->
+    </div>
+    <!--//wrap -->
+
+  </fieldset>
+</form>
+
+</body>
+</html>

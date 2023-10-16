@@ -78,6 +78,8 @@ input::placeholder {color:rgba(0, 0, 0, 0.27) !important;}
 .btn_area a {margin:0 2px;}
 .btn_area.align_r a {float:right;margin:0 0 0 4px;}
 .btn_area.align_l a {float:left;margin:0 4px 0 0;}
+.btn_area.btn_update {margin-top:0;}
+.btn_area.btn_update a {margin-top:18px;}
 /* sort button */
 .btn_sort {position:relative;}
 .btn_sort .ico {position:absolute;right:0;top:50%;margin-top:-7px;display:inline-block;width:4px;height:12px;}
@@ -326,13 +328,12 @@ input[type="checkbox"]:checked:after {display:block;}
 .wrap_pop .btn_bottom {position:fixed;bottom:0;left:0;width:100%;height:68px;padding:16px 0 20px 0;text-align:center;box-sizing:border-box;border-top:1px solid #ebebeb;background-color:#fff;z-index:13;}
 .wrap_pop .nodata,
 .wrap_pop .nosearch {display:flex;align-items:center;justify-content:center;flex-direction:column;height:calc(100vh - 280px);padding:0;border-bottom:0 none;}
-.wrap_pop .box_result {overflow:hidden;margin-bottom:16px;border-radius:6px;border:1px solid #e0e0e0;background-color:#eef4fb;}
+.wrap_pop .box_result {overflow:hidden;display:flex;flex-wrap:wrap;margin-bottom:16px;border-radius:6px;border:1px solid #e0e0e0;background-color:#eef4fb;}
 .wrap_pop .box_result .tit {display:inline-block;width:100%;height:44px;font-weight:600;font-size:14px;line-height:44px;color:#333;text-align:center;background-color:#fff;}
-.wrap_pop .box_result .txt {min-height:12px;padding:16px;font-weight:500;font-size:12px;line-height:18px;color:#333;word-break:break-all;}
-.wrap_pop .box_result .inner_box {min-height:450px;margin-right:-1px;box-sizing:border-box;border-right:1px solid #e0e0e0;border-left:1px solid #e0e0e0;}
+.wrap_pop .box_result .txt {white-space:pre-wrap;min-height:12px;padding:16px;font-weight:500;font-size:12px;line-height:18px;color:#333;word-break:break-all;}
+.wrap_pop .box_result .inner_box {flex:1 1 40%;min-height:450px;margin-right:-1px;box-sizing:border-box;border-right:1px solid #e0e0e0;border-left:1px solid #e0e0e0;}
 .wrap_pop .box_result .inner_box:first-child {border-left:0 none;}
 .wrap_pop .box_result .inner_box:last-child {border-right:0 none;} 
-.wrap_pop .box_result .inner_box.float_l {width:50%;}
 
 /* modal popup */
 .wrap_layer {display:none;position:fixed;top:0;right:0;bottom:0;left:0;z-index:999;width:100%;height:100%;}
