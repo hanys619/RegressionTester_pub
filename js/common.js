@@ -112,6 +112,18 @@ $(document).ready(function(){
 	}
 	del('.tbl_type1 .btn_del');
 
+	/* Test Case 생성 설정 radio */
+	$('.radio label').click(function(){
+		if ($(this).hasClass('label_1')){
+			$('.label_set').attr('disabled', true);
+		}	else if ($(this).hasClass('label_2')){
+			$('.label_set').attr('placeholder', '신규그룹명');
+			$('.label_set').removeAttr('disabled');
+		} else if ($(this).hasClass('label_3')){
+			$('.label_set').attr('placeholder', '신규배포명');
+		}
+	});
+
 	/* 배포생성화면 선택 항목 삭제 */
 	$(document).on('click', '.box_choice .btn_tag_close', function(){
 		$(this).parent('span').remove();
